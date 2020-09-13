@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ITI-Project"
+    }
+  },
+  "defaultProject": "ITI-Project",
+  "cli": {
+    "analytics": false
+  }
 }
