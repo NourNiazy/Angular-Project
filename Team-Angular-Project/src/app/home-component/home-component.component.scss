@@ -1,0 +1,22 @@
+$green-color-one:#669543;
+$green-color-two:#54be73;
+$green-color-three:#78bf4d ;
+$green-color-four:#9cc026;
+h1{
+    color:$green-color-one;
+}
+nav{
+    height: 80px;
+    button{
+        background-color:$green-color-three ;
+        color: white;
+    }
+    img{
+        width: 90px;
+        height: 68.7px;
+    }
+    .nour-nav{
+        display:flex;
+        justify-content: space-between;
+    }
+}
