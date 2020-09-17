@@ -12,9 +12,13 @@ nav{
         background-color:$green-color-three ;
         color: white;
     }
+    .navbar-collapse{
+        flex-grow: initial;
+    }
     .nour-nav{
         display:flex;
         justify-content: space-between;
+        
         .navbar-brand{
             display:flex;
             justify-content: center;
