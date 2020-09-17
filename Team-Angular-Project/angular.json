@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Team-Angular-Project"
+    }
+  },
+  "defaultProject": "Team-Angular-Project",
+  "cli": {
+    "analytics": false
+  }
 }
