@@ -141,14 +141,30 @@ nav{
     .container{
         .row{
             .navbar-brand{
-                img{}
-                div{
+                img{
+                    width: 148px;
+                    height: 113px;
+                }
+                .brand{
+                    display: flex;
+                    flex-direction: column;
                     text-align: center;
                     color: white;
+                    height: 44px !important;
+                    h1{
+                        font-size: 30px;
+                    }
+                    span{
+                        font-size: 10px;
+                        margin-top: 0px;
+                    }
                 }
             }
             .col-xl-3{
-                h2{}
+                h2{
+                    font-size:30px;
+                    margin-bottom: 30px;
+                }
                 
                 .post{
                     display: flex;
@@ -183,7 +199,7 @@ nav{
             }
             
                 .contact-div{
-                    margin-bottom: 5px;
+                    margin-bottom: 10px;
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
