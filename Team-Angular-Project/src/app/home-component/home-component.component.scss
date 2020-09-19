@@ -133,6 +133,54 @@ nav{
         }
     }
 }
+
+//subscribe
+.subscribe{
+    background-image:url(http://webdesign-finder.com/html/canabia/img/parallax/subscribe.jpg);
+    background-position-x:50%;
+    background-position-y:50%;
+    background-size:cover;
+    color: white;
+    .overlay{
+        background-color:rgba(84, 190, 115,0.8);
+        padding: 75px 0px;
+        .row{
+            .subscribe-row{
+                align-items: center;
+                .btn{
+                    background-color:white ;
+                    color:$green-color-two ;
+                    padding: 10px 10px;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    height: 50px;
+                    font-weight: 700;
+                }
+                input{
+                    height: 50px;
+                    width: 269px;
+                    padding: 10px 10px;
+                    border: 1px solid white;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    &::placeholder{
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+                h6{
+                    font-size: 14px;
+                }
+                h2{
+                    font-size:39px;
+                    letter-spacing:-2px;
+                    line-height:39px;
+                }
+            }
+        }
+    }
+}
 //footer
 .footer{
     background-color: #1f232b;
