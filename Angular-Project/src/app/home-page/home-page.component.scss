@@ -14,15 +14,26 @@ $green-color-four:#9cc026;
     background-color: $green-color-three;
     color: white;
     cursor: pointer;
-    padding: 15px;
+    padding: 15px 20px;
     border-radius: 50%;
     transition: all 0.2s linear;
+    animation:nour 1s ease-in-out infinite alternate-reverse;
+    @keyframes nour{
+        0% {
+            bottom: 20px;
+          }
+          100%{
+            bottom: 80px;
+          }
+    }
+    i{
+        color: #fff;
+    }
   }
   
   #myBtn:hover {
     background-color: #555;
-    transition: all 0.2s ease-in-out 0s;
-    transition: all 0.2s linear;
+    transition: all 0.2s linear 0s;
   }
 h1{
     margin: 0px;
@@ -41,7 +52,7 @@ h1{
         }
     }
     .carousel-inner{
-        //border-radius: 0 0 20% 40%;
+        //border-radius: 0 0 30% 30%;
         margin-top: 80px;
         .carousel-item{
             .carousel-caption{
@@ -72,7 +83,145 @@ h1{
         }
     }
 }
-
+//absolute-div
+.absolute-div{
+    
+    .container{
+        .row{
+            .col-xl-3{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                top:-100px;
+                &:first-child{
+                    top:-150px;
+                    .circle-div{
+                        background-color: $green-color-one;
+                    }
+                    .description{
+                        background-color: $green-color-one;
+                    }
+                }
+                &:nth-child(2){
+                    .circle-div{
+                        background-color: $green-color-two;
+                    }
+                    .description{
+                        background-color: $green-color-two;
+                    }
+                }
+                &:nth-child(3){
+                    .circle-div{
+                        background-color: $green-color-three;
+                    }
+                    .description{
+                        background-color: $green-color-three;
+                    }
+                }
+                &:last-child{
+                    top:-150px;
+                }
+                .circle-div{
+                    background-color: $green-color-four;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    height: 80px;
+                    width: 80px;
+                    position: relative;
+                    padding: 20px 25px;
+                    top:30px;
+                    z-index: 1000000;
+                    i{
+                        color: white;
+                        text-align: center;
+                        font-size: 30px;
+                        // position: absolute;
+                        // right: 20px;
+                        // top:20px;
+                    }
+                }
+                .description{
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    padding:35px;
+                    background-color: $green-color-four;
+                    color: white;
+                    text-align: center;
+                    h2{
+                        font-size:24px;
+                        font-weight:700;
+                        height:auto;
+                        line-height:28.8px;
+                        color: white;
+                    }
+                    p{
+                        font-size:16px;
+                        font-weight:400;
+                        height:90px;
+                        line-height:30px;
+                    }
+                }
+            }
+        }
+    }
+}
+//history-about
+.history-about{
+    padding:100px 0px;
+    .container{
+        .row{
+            .col-xl-3{
+                h3{
+                    font-size: 14px;
+                    color:$green-color-four;
+                }
+                h4{
+                    color:rgb(31, 35, 43);
+                    font-size: 30px;
+                    font-weight: 600px;
+                }
+                h5{
+                    color:rgb(31, 35, 43);
+                    font-size:40px;
+                    font-weight: 600px;
+                }
+                h2{
+                    font-size: 12px;
+                    color: $green-color-four;
+                }
+                img{
+                    height: 70px;
+                    width: 70px !important;
+                    border-radius: 5px;
+                    &::after{
+                        content:"8888";
+                        box-sizing:border-box;
+                        color:rgb(120, 191, 77);
+                        z-index: 1000;
+                        font-size: 32px;
+                    }
+                }
+            }
+            .col-xl-6{
+                h3{
+                    color:rgb(31, 35, 43);
+                    font-size:16px;
+                    font-weight:700;
+                    height:52px;
+                    line-height:26px;
+                }
+                p{
+                    color:rgb(128, 128, 128);
+                    font-size:16px;
+                    font-weight:400;
+                    height:104px;
+                    line-height:26px;
+                }
+            }
+        }
+    }
+}
 //subscribe
 .subscribe{
     background-image:url(http://webdesign-finder.com/html/canabia/img/parallax/subscribe.jpg);
