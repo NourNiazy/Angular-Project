@@ -218,13 +218,33 @@ h1{
                 a{
                     margin-right: 8px;
                     color: #d2d2d2;
+                    border:1px solid #d2d2d2;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+                    
+                    &:first-child{
+                        padding:9px 15px;
+                        &:hover{
+                            color: #3b5998;
+                            border-color: #3b5998;
+                        }
+                    }
+                    &:nth-child(2){
+                        padding:9px 12px;
+                        &:hover{
+                            color: #1DA1F2;
+                            border-color: #1DA1F2;
+                        }
+                    }
+                    &:nth-child(3){
+                        padding:9px 12px;
+                        &:hover{
+                            color: #DB4437;
+                            border-color:#DB4437;
+                        }
+                    }
                     i{
-                        border:1px solid #d2d2d2;
-                        box-sizing: border-box;
-                        border-radius: 50%;
-                        padding:15px;
                         font-size: 14px;
-                        box-sizing: border-box;
                     }
                 }
             }

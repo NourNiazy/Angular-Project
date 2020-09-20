@@ -16,7 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CartComponent,
     ProductComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

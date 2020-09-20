@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Project';
+ /* navbarOpen = false;
+
+toggleNavbar() {
+  this.navbarOpen = !this.navbarOpen;
+}*/
 }

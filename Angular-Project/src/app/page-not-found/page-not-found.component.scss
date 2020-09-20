@@ -1,0 +1,17 @@
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+    text-align: center;
+    .not-found{
+        .btn{
+            background-color: #78bf4d;
+            margin-top: 20px;
+            border: none;
+            &:focus{
+                
+            }
+        }
+    }
+}
