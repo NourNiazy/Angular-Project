@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RegisterComponent } from './register/register.component';
     HomePageComponent,
     CartComponent,
     ProductComponent,
-    RegisterComponent
+    RegisterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
