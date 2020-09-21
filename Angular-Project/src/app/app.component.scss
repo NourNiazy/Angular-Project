@@ -8,6 +8,9 @@ nav{
     button{
         background-color:$green-color-three ;
         color: white;
+        a{
+            color: white;
+        }
     }
     .navbar-collapse{
         flex-grow: initial;

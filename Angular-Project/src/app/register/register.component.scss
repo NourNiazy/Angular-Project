@@ -1,6 +1,6 @@
 .container
 {
-    margin-top: 60px;
+    margin-top: 100px;
 }
 * {
     box-sizing: border-box;
@@ -70,4 +70,18 @@
 .submitbutton:hover{
     color: black;
 }
-
+//EDIT
+form{
+    width: 100%;
+    .pd-none{
+        padding: 0px;
+    }
+    .submitbutton{
+        border: none;
+        color: #ffffff;
+        background-color: #669543;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+    
+}

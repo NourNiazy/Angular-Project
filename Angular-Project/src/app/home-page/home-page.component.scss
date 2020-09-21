@@ -228,7 +228,7 @@ h1{
   background-attachment: scroll;
   .overlay{
       background-color: rgba(155, 153, 153, 0.718);
-      padding:150px 0px;
+      padding:100px 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -238,14 +238,65 @@ h1{
         color: white;
         border-radius: 10px;
         margin-top: 80px;
+        padding: 8px 35px;
+      }
+      .carousel-control-prev-icon,.carousel-control-next-icon{
+          background-image: none;
+        background-color: $green-color-one;
+        box-sizing: border-box;
+        height: 50px;
+         width: 50px;
+        border-radius: 50%;
+        color:white;
+        padding: 13px;
+        i{
+        }
       }
       .carousel-item{
           .col-xl-3 {
               .product-box{
-                  .product-img{}
+                  border-radius: 10px;
+                  overflow: hidden;
+                  .product-img{
+                    overflow: hidden;
+                    img{
+                        position: relative;
+                        width: 270px;
+                        height: 270px;
+                    }
+                      span{
+                          position: absolute;
+                          top:10px;
+                          left:25px;
+                          color: white;
+                          background-color: $green-color-one;
+                          border-radius: 10px;
+                          padding: 10px;
+                          box-sizing: border-box;
+                      }
+                  }
                   .product-details{
-                      h3{}
-                      p{}
+                      background-color: white;
+                      overflow: hidden;
+                      padding: 30px;
+                      box-sizing: border-box;
+                      h3{
+                        font-size:20px;
+                        font-weight:700;
+                        height:auto;
+                        line-height:24px;
+                        overflow-wrap:break-word;
+                        text-decoration-color:rgb(31, 35, 43);
+                        margin-bottom: 16px;
+                      }
+                      p{
+                        color:rgb(128, 128, 128);
+                        font-size:16px;
+                        font-weight:400;
+                        height:90px;
+                        line-height:30px;
+                        width: 200px;
+                      }
                   }
               }
 
