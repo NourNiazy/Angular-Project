@@ -1,1 +1,115 @@
-<p>register works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+    <form #userForm="ngForm" >
+       <div class="row">
+          <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6" >
+             <label class="control-label">First Name :</label>
+             <input type="text" class="form-control" placeholder="enter first name" required [class.is-invalid]="fname.invalid " #fname="ngModel" [(ngModel)]="userModel.fname" name="fname">
+             <small class="text-danger"  [class.d-none]="fname.valid ||fname.untouched">First Name is Required</small>
+          </div>
+          <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6" >
+             <label class="control-label">Last Name :</label>
+             <input type="text" class="form-control" placeholder="enter last name" required [class.is-invalid]="lname.invalid " #lname="ngModel" [(ngModel)]="userModel.lname" name="lname">
+             <small class="text-danger"  [class.d-none]="lname.valid ||lname.untouched">Last Name is Required</small>
+          </div>
+       </div>
+       <div class="row">
+          <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
+             <label class="control-label">Company Name:</label>
+             <input type="text" class="form-control"   [class.is-invalid]="compname.invalid " #compname="ngModel" [(ngModel)]="userModel.compname" name="compname">
+             <small class="text-danger"  [class.d-none]="compname.valid ||compname.untouched">Company name is Required</small>
+          </div>
+          <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
+             <label class="control-label">Email :</label>
+             <input type="email" class="form-control"  [class.is-invalid]="email.invalid "  required pattern="^\w*@\w*\.com$" #email="ngModel" [(ngModel)]="userModel.email" name="email">
+             <div *ngIf="email.errors && (email.invalid ||email.touched)">
+                <small class="text-danger"
+                *ngIf="email.errors.required">email is required</small>
+                <small class="text-danger"
+                *ngIf="email.errors.pattern">email must be in right format</small>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          <div class="form-group col-sx-12 col-sm-12 col-md-12 col-lg-12">
+             <label class="control-label">address :</label>
+             <input type="text" class="form-control"  required [class.is-invalid]="address.invalid " #address="ngModel" [(ngModel)]="userModel.address" name="address">
+             <small class="text-danger"  [class.d-none]="address.valid ||address.untouched">address is Required</small>
+          </div>
+       </div>
+       <div class="row">
+          <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
+             <label>Town/City</label>
+             <input type="text" class="form-control"  required [class.is-invalid]="Town.invalid " #Town="ngModel" [(ngModel)]="userModel.Town" name="Town">
+             <small class="text-danger"  [class.d-none]="Town.valid ||Town.untouched">Town/City  is Required</small>
+          </div>
+         <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6"> 
+              <label class="control-label">State/Province:</label>
+             <select  class="custom-select" [class.is-invalid]="StateHasErr && State.touched" #State [(ngModel)]="userModel.State" name="State">
+                <option >United Kingdom(uk)</option>
+                <option *ngFor="let State of States">{{State}}</option>
+             </select>
+          </div>
+       </div>
+       <div class="row">
+          <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
+             <label class="control-label">Postcode:</label>
+             <input type="tel" class="form-control"  required pattern="^\d*$" [class.is-invalid]="Postcode.invalid" #Postcode="ngModel" [(ngModel)]="userModel.Postcode" name="Postcode">
+             <div *ngIf="Postcode.errors && (Postcode.invalid ||Postcode.touched)">
+                <small class="text-danger"
+                *ngIf="Postcode.errors.required">Postcode number is required</small>
+                <small class="text-danger"
+                *ngIf="Postcode.errors.pattern">Postcode must be in only digits</small>
+             </div>
+          </div>
+        <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
+             <label class="control-label">Country:</label>
+             <select  class="custom-select" [class.is-invalid]="CountryHasErr && Country.touched" #Country [(ngModel)]="userModel.Country" name="Country">
+                <option >United Kingdom(uk)</option>
+                <option *ngFor="let Country of Countrys">{{Country}}</option>
+             </select>
+          </div>
+       </div>
+       <div class="row">
+          <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
+             <label class="control-label">telephone :</label>
+             <input type="tel"  required #phone="ngModel" pattern="^\d{10}$" [class.is-invalid]="phone.invalid" class="form-control" [(ngModel)]="userModel.phone" name="phone">
+             <div *ngIf="phone.errors && (phone.invalid ||phone.touched)">
+                <small class="text-danger"
+                *ngIf="phone.errors.required">Phone number is required</small>
+                <small class="text-danger"
+                *ngIf="phone.errors.pattern">Phone number must be 10 digits</small>
+             </div> 
+         </div>
+         <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
+             <label class="control-label">Fax:</label>
+             <input type="text" class="form-control" pattern="^\+[\d|\-]*$" required [class.is-invalid]="Fax.invalid " #Fax="ngModel" [(ngModel)]="userModel.Fax" name="Fax">
+             <div *ngIf="Fax.errors && (Fax.invalid ||Fax.touched)">
+                <small class="text-danger"
+                *ngIf="Fax.errors.required">Fax number is required</small>
+                <small class="text-danger"
+                *ngIf="Fax.errors.pattern">Fax must be in right format</small>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          <div ngModelGroup="PasswordGroup" #PasswordGroup="ngModelGroup" class="col-lg-12"[class.has-error]="ConfirmPassword.touched&& ConfirmPassword.invalid&&!ConfirmPassword.errors?.Required">
+             <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6" [class.has-error]="Password.touched&& Password.invalid">
+                <label for="Password" class="control-label">Password:</label>
+                <input type="password" class="form-control" #Password="ngModel" required [class.is-invalid]="Password.invalid" 
+                (input)="ConfirmPassword.control.updateValueAndValidity()"
+                   [(ngModel)]="userModel.Password" name="Password">
+                <small class="text-danger"  *ngIf="Password.touched && Password.errors?.required">Password is Required</small>
+             </div>
+             <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6" [class.has-error]="ConfirmPassword.touched && ConfirmPassword.invalid">
+                <label class="control-label">Confirm Password:</label>
+                <input type="password" class="form-control"  #ConfirmPassword="ngModel" appConfirmEqualValidator="Password"
+                   required [class.is-invalid]="ConfirmPassword.invalid" [(ngModel)]="userModel.ConfirmPassword" name="ConfirmPassword">
+                   <small class="text-danger" *ngIf="ConfirmPassword.touched && ConfirmPassword.errors?.required">ConfirmPassword is required</small>
+                   <small class="text-danger"  *ngIf="ConfirmPassword.touched && ConfirmPassword.errors?.notEqual && !ConfirmPassword.errors?.required">Password and ConfirmPassword don't match </small>
+                </div>
+             </div>
+       </div>
+           <input type="submit" value="Register Now" class="submitbutton" />
+    </form>
+ </div></div>
