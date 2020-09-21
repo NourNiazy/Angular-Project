@@ -222,6 +222,38 @@ h1{
         }
     }
 }
+.our-product{
+    background-image: url("http://webdesign-finder.com/html/canabia/img/parallax/progress.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  .overlay{
+      background-color: rgba(155, 153, 153, 0.718);
+      padding:150px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .btn{
+        background-color: $green-color-one;
+        color: white;
+        border-radius: 10px;
+        margin-top: 80px;
+      }
+      .carousel-item{
+          .col-xl-3 {
+              .product-box{
+                  .product-img{}
+                  .product-details{
+                      h3{}
+                      p{}
+                  }
+              }
+
+          }
+      }
+  }
+
+}
 //subscribe
 .subscribe{
     background-image:url(http://webdesign-finder.com/html/canabia/img/parallax/subscribe.jpg);
