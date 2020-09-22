@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {ConfirmEqualValidatorDirective} from '../app/sharedfile/validatepassword.directive';
+import{HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import {ConfirmEqualValidatorDirective} from '../app/sharedfile/validatepassword
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
