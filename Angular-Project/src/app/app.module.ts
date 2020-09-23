@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {ConfirmEqualValidatorDirective} from '../app/sharedfile/validatepassword.directive';
 import{HttpClientModule} from '@angular/common/http';
+import { CheckOutComponent } from './check-out/check-out.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import{HttpClientModule} from '@angular/common/http';
     RegisterComponent,
     PageNotFoundComponent,
     ConfirmEqualValidatorDirective,
+    CheckOutComponent,
   ],
   imports: [
     BrowserModule,
