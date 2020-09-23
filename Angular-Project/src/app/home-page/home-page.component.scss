@@ -18,6 +18,9 @@ $green-color-four:#9cc026;
     border-radius: 50%;
     transition: all 0.2s linear;
     animation:nour 1s ease-in-out infinite alternate-reverse;
+    @media only screen and (max-width: 992px) {
+        animation: initial;
+    }
     @keyframes nour{
         0% {
             bottom: 20px;
@@ -94,6 +97,7 @@ h1{
                     width: 170px;
                     height: 50px;
                     margin-top: 50px;
+                    border-radius: 10px;
                 }
             }
         }

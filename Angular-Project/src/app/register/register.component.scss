@@ -1,6 +1,6 @@
 .container
 {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 * {
     box-sizing: border-box;
@@ -20,47 +20,47 @@
 
 
 
-.col-xs-12,
-.col-sm-12,
-.col-md-12,
-.col-lg-12 {
-	position: relative;
-	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
-}
+// .col-xs-12,
+// .col-sm-12,
+// .col-md-12,
+// .col-lg-12 {
+// 	position: relative;
+// 	min-height: 1px;
+// 	padding-right: 15px;
+// 	padding-left: 15px;
+// }
 
-.col-lg-6{
-    width:400px ;
-}
-.col-lg-12{
-    width:800px;
-}
+// .col-lg-6{
+//     width:400px ;
+// }
+// .col-lg-12{
+//     width:800px;
+// }
 
-@media (max-width:400px) {
-	.col-md-6{
-		width: 100%;
-        float: left;
-        height: 100px;
-	}
-}
+// @media (max-width:400px) {
+// 	.col-md-6{
+// 		width: 100%;
+//         float: left;
+//         height: 100px;
+// 	}
+// }
 
-@media (min-width:700px) {
-	.col-lg-6 {
-		width: 100%;
-        float: left;
-        height: 100px;
-	}
-}
+// @media (min-width:700px) {
+// 	.col-lg-6 {
+// 		width: 100%;
+//         float: left;
+//         height: 100px;
+// 	}
+// }
 
 
 
-@media (min-width:780px) {
-	.col-md-6 .col-md-6 {
-		width:100%;
-		float: left;
-	}
-}
+// @media (min-width:780px) {
+// 	.col-md-6 .col-md-6 {
+// 		width:100%;
+// 		float: left;
+// 	}
+// }
 
 
 .submitbutton{
@@ -71,8 +71,23 @@
     color: black;
 }
 //EDIT
+.register-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 80px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 170px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("http://webdesign-finder.com/html/canabia/img/parallax/subscribe.jpg");
+    h2{}
+}
 form{
     width: 100%;
+    .row{
+        margin:0px;
+    }
     .pd-none{
         padding: 0px;
     }
