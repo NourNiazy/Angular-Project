@@ -53,8 +53,14 @@ h1{
     }
     .carousel-inner{
         //border-radius: 0 0 30% 30%;
+        @media only screen and (max-width: 992px) {
+            height:444px;
+        }
         margin-top: 80px;
         .carousel-item{
+            @media only screen and (max-width: 992px) {
+                height:100%;
+            }
             .carousel-caption{
                 position: absolute;
                 right: 15%;
@@ -66,11 +72,21 @@ h1{
                 padding-bottom: 20px;
                 color: #fff;
                 text-align: center;
+                @media only screen and (max-width: 992px) {
+                    display: inline;
+                    top:0px;
+                }
                 h5{
                     font-size: 64px;
+                    @media only screen and (max-width: 992px) {
+                        font-size: 36px;
+                    }
                 }
                 p{
                     font-size: 18px;
+                    @media only screen and (max-width: 992px) {
+                        font-size: 16px;
+                    }
                 }
                 .btn{
                     background-color: $green-color-four;
@@ -85,7 +101,9 @@ h1{
 }
 //absolute-div
 .absolute-div{
-    
+    @media only screen and (max-width: 992px) {
+      
+    }
     .container{
         .row{
             .col-xl-3{
@@ -94,8 +112,14 @@ h1{
                 align-items: center;
                 position: relative;
                 top:-100px;
+                @media only screen and (max-width: 992px) {
+                    top:initial;
+                }
                 &:first-child{
                     top:-150px;
+                    @media only screen and (max-width: 992px) {
+                        top:0px;
+                    }
                     .circle-div{
                         background-color: $green-color-one;
                     }
@@ -121,6 +145,9 @@ h1{
                 }
                 &:last-child{
                     top:-150px;
+                    @media only screen and (max-width: 992px) {
+                        top:0px;
+                    }
                 }
                 .circle-div{
                     background-color: $green-color-four;
@@ -131,7 +158,7 @@ h1{
                     position: relative;
                     padding: 20px 25px;
                     top:30px;
-                    z-index: 100;
+                    z-index: 120;
                     i{
                         color: white;
                         text-align: center;
@@ -148,6 +175,9 @@ h1{
                     background-color: $green-color-four;
                     color: white;
                     text-align: center;
+                    @media only screen and (max-width: 992px) {
+                        padding:25px;
+                    }
                     h2{
                         font-size:24px;
                         font-weight:700;
@@ -160,6 +190,7 @@ h1{
                         font-weight:400;
                         height:90px;
                         line-height:30px;
+                        margin-bottom: 0px;
                     }
                 }
             }
@@ -185,6 +216,9 @@ h1{
                     color:rgb(31, 35, 43);
                     font-size:40px;
                     font-weight: 600px;
+                    @media only screen and (max-width: 992px) {
+                        font-size: 32px;
+                    }
                 }
                 h2{
                     font-size: 12px;
@@ -204,6 +238,9 @@ h1{
                 }
             }
             .col-xl-6{
+                @media only screen and (max-width: 992px) {
+                    margin-bottom: 100px;
+                }
                 h3{
                     color:rgb(31, 35, 43);
                     font-size:16px;
@@ -217,6 +254,9 @@ h1{
                     font-weight:400;
                     height:104px;
                     line-height:26px;
+                    @media only screen and (max-width: 992px) {
+                        margin: 50px 0px;
+                    }
                 }
             }
         }
@@ -227,18 +267,25 @@ h1{
   background-repeat: no-repeat;
   background-attachment: scroll;
   .overlay{
-      background-color: rgba(155, 153, 153, 0.718);
+      background-color: rgba(66, 60, 60, 0.718);
       padding:100px 0px;
       display: flex;
+      box-sizing: border-box;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media only screen and (max-width: 992px) {
+        padding:40px 0px;
+    }
       .btn{
         background-color: $green-color-one;
         color: white;
         border-radius: 10px;
         margin-top: 80px;
         padding: 8px 35px;
+        @media only screen and (max-width: 992px) {
+            margin-top: 30px;
+        }
         a{
             color: white;
             text-decoration: none;
@@ -261,6 +308,9 @@ h1{
               .product-box{
                   border-radius: 10px;
                   overflow: hidden;
+                  @media only screen and (max-width: 992px) {
+                    margin-bottom: 20px;
+                }
                   .product-img{
                     overflow: hidden;
                     img{
@@ -288,6 +338,9 @@ h1{
                       overflow: hidden;
                       padding: 30px;
                       box-sizing: border-box;
+                      @media only screen and (max-width: 992px) {
+                        padding: 15px;
+                    }
                       h3{
                         font-size:20px;
                         font-weight:700;
@@ -304,6 +357,9 @@ h1{
                         height:90px;
                         line-height:30px;
                         width: 200px;
+                        @media only screen and (max-width: 992px) {
+                            width: 100%;
+                        }
                       }
                   }
               }
@@ -343,6 +399,9 @@ h1{
                     box-sizing: border-box;
                     border-radius: 10px;
                     background-color: transparent;
+                    @media only screen and (max-width: 992px) {
+                        margin-bottom: 20px;
+                    }
                     &::placeholder{
                         color: white;
                         font-size: 14px;
@@ -365,9 +424,19 @@ h1{
     background-color: #1f232b;
     padding: 150px 0px;
     color: white;
+    @media only screen and (max-width: 992px) {
+        padding: 80px 0px;
+    }
     .container{
         .row{
             .navbar-brand{
+                @media only screen and (max-width: 992px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                }
                 img{
                     width: 148px;
                     height: 113px;
@@ -491,3 +560,5 @@ h1{
         }
     }
 }
+@media only screen and (max-width: 992px) {
+  }
