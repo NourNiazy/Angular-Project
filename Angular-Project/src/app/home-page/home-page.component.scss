@@ -1,7 +1,5 @@
-$green-color-one:#669543;
-$green-color-two:#54be73;
-$green-color-three:#78bf4d ;
-$green-color-four:#9cc026;
+@import '../app.component.scss';
+
 
 #myBtn {
     position: fixed;
@@ -305,6 +303,7 @@ h1{
         color:white;
         padding: 13px;
         i{
+            
         }
       }
       .carousel-item{
