@@ -8,7 +8,7 @@ import {Checkout} from '../sharedfile/checkout';
 export class CheckOutComponent implements OnInit {
 
   constructor() { }
-  checkoutModel =new Checkout("Nour","nourmostafa01551@gmail.com","Assuit","qusia","Mah","United Kingdom(uk)","123",123,"0123456789",+123-456,"+123-456");
+  checkoutModel =new Checkout("Ex:Nour","nourmostafa01551@gmail.com","Assuit","qusia","Mah","United Kingdom(uk)","123",123,"0123456789",+123-456,"+123-456");
   ngOnInit(): void {
   }
 
