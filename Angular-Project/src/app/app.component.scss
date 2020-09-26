@@ -1,4 +1,4 @@
-$green-color-one:#669543;
+$green-color-one:#7DAD3D;
 $green-color-two:#54be73;
 $green-color-three:#78bf4d ;
 $green-color-four:#9cc026;
@@ -6,12 +6,19 @@ nav{
     height: 80px;
     background-color: white;
     button{
-        background-color:$green-color-one ;
-        color: white;
+        background-color:$green-color-one ;  
+              height:40px;
+        color: white;        
+            padding-bottom: 20px;
+            margin-left: 30px;
+
         a{
             color: white;
+            padding: 0px;
         }
     }
+
+    
     .navbar-collapse{
         flex-grow: initial;
         .navbar-nav{
@@ -30,13 +37,27 @@ nav{
                     color: $green-color-three;
                 }
                 .nav-link{
-                &:hover{
-                    color:$green-color-three ;
-                }
+                    font-size:18px;  
+                    font-weight: 500;
+ 
+                    &:hover ,  &:checked{
+                        color:$green-color-three ;
+                        font-size:20px;   
+                    }  
+                
                     i{
+                        padding: 2px;
+                        font-size:25px;
                         color:$green-color-one ;
-                        margin-left: 20px;
+                        margin-left: 10px;
+
+                        &:hover ,  &:active{
+                            color:$green-color-three ;
+                            font-size:20px;   
+                        }  
+                    
                     }
+                    
                 }
             }
         }
@@ -49,8 +70,8 @@ nav{
             display:flex;
             justify-content: center;
             img{
-                width: 90px;
-                height: 68.7px;
+                width: 70px;
+                height: 53.4px;
             }
             div{
                 display:flex;

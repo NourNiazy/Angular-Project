@@ -2,7 +2,7 @@
     <h2>Cart</h2>
  </div> -->
 <div class="row">
-    <aside  class="col-md-7  col-sm-3 " style="padding: 0px;">
+    <aside class=" col-lg-8 col-md-7  col-sm-3 " style="padding: 1px;">
         <div class="card ">
 
             <div class="table-responsive " style="height: 450px;">
@@ -10,9 +10,9 @@
                 <table class="table table-borderless   table-striped">
                     <thead class="text-muted">
                         <tr class="small text-uppercase">
-                            <th scope="col">Product</th>
-                            <th scope="col" width="120">Quantity</th>
-                            <th scope="col" width="120">Price</th>
+                            <th scope="col-4">Product</th>
+                            <th scope="col-2" width="120">Quantity</th>
+                            <th scope="col-2" width="120">Price</th>
 
                         </tr>
                     </thead>
@@ -20,32 +20,37 @@
                         <tr *ngFor="let p of ProductList; let id = index">
                             <td>
                                 <figure class="itemside align-items-center">
-                                    <div class="aside">
-                                        <img src="{{p.img_url}}" class="img-sm" width="60px"></div>
-                                    <figcaption class="info">
-                                        <a href="#" class="title text-dark">{{p.title}}</a>
-                                        <p class="text-muted small">Size: {{p.size}} </p>
-                                    </figcaption>
+                                    <img src="{{p.img_url}}" class="img-sm" width="60px">
+                                    <a href="#" class="title text-dark">{{p.title}}</a>
                                 </figure>
                             </td>
                             <td>
-                                <select class="form-control">
+                                <!--   
+                                       <select class="form-control">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>
                                 </select>
+                                 <div class="quantity-wrapper">
+                                    <input class="quantity" min="1"  max="10" value="1" type="number">
+                                 </div>
+                                   -->
+                                <input class="counterQ" max="10" min="1" name="size" step="1" type="number" value="1">
                             </td>
                             <td>
                                 <div class="price-wrap">
-                                    <var class="price">{{p.price}}</var>
-                                    <small class="text-muted"> {{p.price}} for each </small>
+                                    <var class="price">{{p.price}}</var> <br>
+                                    <!--     <small class="text-muted"> {{p.price}} for each </small>
+                               -->
                                 </div> <!-- price-wrap .// -->
                             </td>
-                            <td class="text-right d-none d-md-block">
-                                <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light"
+                            <td class="text-right d-none d-md-block ">
+                                <a data-original-title="Save to Wishlist" title="" href="#" class="btn btn-light heart"
                                     data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                <a href="" class="btn btn-light"> Remove</a>
+                                <a href="#" class="btn btn-light remove"> <i class="far fa-trash-alt"></i>
+
+                                </a>
                             </td>
                         </tr>
 
@@ -66,25 +71,23 @@
     <!-- col.// -->
 </div> <!-- row.// -->
 
-<div class="row">
-
-    <div class="card  col-sm-3 col-md-7 subDiv" style="height: 200px; padding: 25px;">
+<div class="row coupon">
+    <div class="card   col-lg-4 col-sm col-md-6 " style="height: 200px; margin-right: 5px;">
         <div class="card-body ">
             <form>
                 <div class="form-group">
                     <label>Have coupon?</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="" placeholder="Coupon code">
+                        <input type="text" class="form-control" name="" placeholder="Code">
                         <span class="input-group-append">
-                            <button class="btn btn-primary">Apply</button>
+                            <button class="btn btn-primary apply">Apply</button>
                         </span>
                     </div>
                 </div>
             </form>
         </div> <!-- card-body.// -->
     </div> <!-- card.// -->
-
-    <div class="card  col-sm-3  col-md-7 subDiv">
+    <div class="card  col-lg-4 col-sm-3  col-md-7 ">
         <div class="card-body ">
             <dl class="dlist-align">
                 <dt>Total price:</dt>
@@ -100,10 +103,12 @@
             </dl>
             <hr>
             <p class="text-center mb-3">
-                <img src="bootstrap-ecommerce-html/images/misc/payments.png" height="26">
             </p>
-            <a href="#" class="btn btn-primary btn-block"> Make Purchase </a>
-            <a href="#" class="btn btn-light btn-block">Continue Shopping</a>
+            <a href="#" class="btn btn-primary btn-block purchase">
+                <i class="fas fa-tags"></i> Make Purchase
+            </a>
+            <a href="#" class="btn btn-light btn-block shopping"> <i class="fas fa-shopping-basket"></i> Continue
+                Shopping</a>
         </div> <!-- card-body.// -->
     </div> <!-- card.// -->
 
