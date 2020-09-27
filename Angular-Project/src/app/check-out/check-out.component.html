@@ -50,7 +50,7 @@
                     </div>
                     <div class="form-group">
                       <label for="ccnum">Credit card number</label>
-                      <input type="text" id="ccnum" class="form-control"pattern="[0-9]{16}" name="cardnumber"[class.is-invalid]="cardnumber.invalid && cardnumber.touched "#cardnumber="ngModel"  placeholder="1111-2222-3333-4444"[(ngModel)]="checkoutModel.cardnumber"required>
+                      <input type="text" id="ccnum" class="form-control"pattern="[0-9]{13,16}" name="cardnumber"[class.is-invalid]="cardnumber.invalid && cardnumber.touched "#cardnumber="ngModel"  placeholder="1111-2222-3333-4444"[(ngModel)]="checkoutModel.cardnumber"required>
                     </div>
                     <div class="form-group">
                       <label for="expmonth">Exp Month</label>

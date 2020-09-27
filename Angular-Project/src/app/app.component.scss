@@ -40,9 +40,9 @@ nav{
                     font-size:18px;  
                     font-weight: 500;
  
-                    &:hover ,  &:checked{
+                    &:hover ,  &:checked,&:active{
                         color:$green-color-three ;
-                        font-size:20px;   
+                        //font-size:20px;   
                     }  
                 
                     i{
@@ -53,7 +53,7 @@ nav{
 
                         &:hover ,  &:active{
                             color:$green-color-three ;
-                            font-size:20px;   
+                            //font-size:20px;   
                         }  
                     
                     }
