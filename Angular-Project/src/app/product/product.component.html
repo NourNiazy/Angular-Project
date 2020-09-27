@@ -29,8 +29,8 @@
     <div class="row">
       
      <div class="card-columns mx-auto d-flex " *ngFor="let p of Products">
-      <div class="col-sm-2">
-        <div class="card" style="width:300px; margin-bottom: 50px;">
+      <div class="col-sm-3">
+        <div class="card" style="width:250px; margin-bottom: 50px;">
             <div class="portrait">
               <img class="card-img-top zoom" src="{{p.img_url}}" alt="Card image">
             <div class="top-left">
@@ -43,7 +43,7 @@
               <a class="btn btn-success" href="#" role="button"><i class='fas fa-shopping-cart' style='font-size:24px'></i></a>
             </div>
           </div>  
-            <div class="card-body"><br>
+            <div class="card-body">
                 <div *ngFor="let r of p.rateList" style="display: inline;">  
                     <span class="fa fa-star {{r}}"></span>   
                 </div><br><br>
