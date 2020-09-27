@@ -2,7 +2,6 @@
 * {
     margin-top: 10px;
 }
-<<<<<<< HEAD
 .cart-header{
     margin-top:80px;
     display: flex;
@@ -18,56 +17,6 @@
       align-items: center;
   justify-content: center;
   margin-top: 100px;
-=======
-
-
-.row {
-    align-items: center;
-    justify-content: center;
-
-    tr td {
-        vertical-align: middle;
-        height: 5px;
-        padding: 10px;
-        img {
-            margin: 5px;
-        }
-      
-        .heart {
-            i {
-                color: white;
-            }
-            background-color: red;
-        }
-        .remove {
-            color: white;
-            background-color: $green-color-one;
-        }
-        var {
-            font-style: normal;
-        }
-
-        .counterQ,
-        .quantity {
-            width: 80%;
-            text-align: center;
-            height: 40%;
-        }
-
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            height: 40px;
-            opacity: 0.5;
-        }
-    }
-
-    .purchase{
-        background-color: $green-color-one;
-
-    }
-    .shopping{
-        background-color:$green-color-four;
->>>>>>> 78979c71d82e29fa6e02fa24bcc750ed1ea2e2f6
   
     }
     .apply {
@@ -75,7 +24,7 @@
         background-color: $green-color-one;
 
     }
-}
+
 
 .row:first-child {
     margin-top: 100px;
