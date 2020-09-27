@@ -264,6 +264,7 @@ h1{
         }
     }
 }
+//OUR PRODUCT
 .our-product{
     background-image: url("http://webdesign-finder.com/html/canabia/img/parallax/progress.jpg");
   background-repeat: no-repeat;
@@ -326,7 +327,7 @@ h1{
                         width: 270px;
                         height: 270px;
                     }
-                      .del,.sale{
+                      .del,.sale,.cart-icon{
                           position: absolute;
                           top:10px;
                           left:25px;
@@ -339,6 +340,11 @@ h1{
                       .sale{
                         top:50px;
                         background-color: rgb(158, 15, 15);
+                      }
+                      .cart-icon{
+                        left:230px;
+                        top:230px;
+                        font-size: 10px;
                       }
                   }
                   .product-details{
