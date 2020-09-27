@@ -269,6 +269,10 @@ h1{
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  h2{
+    color: $green-color-one;
+    margin-bottom: -50ox;
+  }
   .overlay{
       background-color: rgba(66, 60, 60, 0.718);
       padding:100px 0px;

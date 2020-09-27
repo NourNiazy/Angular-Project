@@ -17,7 +17,8 @@
       align-items: center;
   justify-content: center;
   margin-top: 100px;
-  
+  margin-right: 0px;
+  margin-left: 0px;
     }
     .apply {
         margin-top: 0px;
@@ -29,7 +30,9 @@
 .row:first-child {
     margin-top: 100px;
 }
-
+.coupon{
+    align-items: flex-start;
+}
 /*
 .quantity-wrapper {
     position: relative;
