@@ -19,16 +19,31 @@
     form{
     display: flex;
     flex-wrap: wrap;
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 40px;
+    }
     .billing-address{
       width:45%;
       margin-right: 50px;
+      @media only screen and (max-width: 992px) {
+        width:100%;
+        margin-right: 0px;
+      }
       .group{
         display: flex;
         justify-content: space-between;
+        .form-group{
+          &:first-child{
+            margin-right:10px;
+          }
+        }
       }
     }
     .payment{
       width: 45%;
+      @media only screen and (max-width: 992px) {
+        width:100%;
+      }
       .icon-container{
         margin-bottom: 30px;
         i{
@@ -38,6 +53,11 @@
       .group{
         display: flex;
         justify-content: space-between;
+        .form-group{
+          &:first-child{
+            margin-right:10px;
+          }
+        }
       }
     }
     .btn{
