@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {ConfirmEqualValidatorDirective} from '../app/sharedfile/validatepassword.directive';
 import{HttpClientModule} from '@angular/common/http';
+import { TeamComponent } from './team/team.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import{HttpClientModule} from '@angular/common/http';
     RegisterComponent,
     PageNotFoundComponent,
     ConfirmEqualValidatorDirective,
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,3 +42,4 @@ export class NavigationMenuItemComponent {
 
      //ngOnInit(): void {}
  }
+ 
