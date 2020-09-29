@@ -11,8 +11,12 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {ConfirmEqualValidatorDirective} from '../app/sharedfile/validatepassword.directive';
 import{HttpClientModule} from '@angular/common/http';
+<<<<<<< HEAD
 import { CheckOutComponent } from './check-out/check-out.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+=======
+import { TeamComponent } from './team/team.component';
+>>>>>>> 8c2612242c1f7767c6b6418ae3fb1f15c13f797f
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RegisterComponent,
     PageNotFoundComponent,
     ConfirmEqualValidatorDirective,
+<<<<<<< HEAD
     CheckOutComponent,
+=======
+    TeamComponent,
+>>>>>>> 8c2612242c1f7767c6b6418ae3fb1f15c13f797f
   ],
   imports: [
     BrowserModule,
@@ -47,3 +55,4 @@ export class NavigationMenuItemComponent {
 
      //ngOnInit(): void {}
  }
+ 

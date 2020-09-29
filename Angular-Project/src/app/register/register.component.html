@@ -3,7 +3,7 @@
 </div>
 <div class="container">
     <div class="row justify-content-center">
-    <form #userForm="ngForm" >
+    <form #userForm="ngForm" novalidate (ngSubmit)="onSubmit()" action="../home-page/home-page.component.html" >
        <div class="row">
           <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6" >
              <label class="control-label">First Name :</label>
@@ -36,7 +36,7 @@
        <div class="row">
           <div class="form-group col-sx-12 col-sm-12 col-md-12 col-lg-12">
              <label class="control-label">address :</label>
-             <input type="text" class="form-control"  required [class.is-invalid]="address.invalid " #address="ngModel" [(ngModel)]="userModel.address" name="address">
+             <input type="text" class="form-control" required [class.is-invalid]="address.invalid " #address="ngModel" [(ngModel)]="userModel.address" name="address">
              <small class="text-danger"  [class.d-none]="address.valid ||address.untouched">address is Required</small>
           </div>
        </div>
@@ -76,7 +76,7 @@
        <div class="row">
           <div class="form-group col-sx-12 col-sm-6 col-md-6 col-lg-6">
              <label class="control-label">telephone :</label>
-             <input type="tel"  required #phone="ngModel" pattern="^\d{10}$" [class.is-invalid]="phone.invalid" class="form-control" [(ngModel)]="userModel.phone" name="phone">
+             <input type="tel"  required #phone="ngModel"   pattern="^\d{10}$" [class.is-invalid]="phone.invalid" class="form-control" [(ngModel)]="userModel.phone" name="phone">
              <div *ngIf="phone.errors && (phone.invalid ||phone.touched)">
                 <small class="text-danger"
                 *ngIf="phone.errors.required">Phone number is required</small>
@@ -113,6 +113,6 @@
                 </div>
              </div>
        </div>
-           <input type="submit" value="Register Now" class="submitbutton" />
+           <input type="submit" [disabled]="userForm.form.invalid" class="btn btn-primary" value="Register Now" class="submitbutton" />
     </form>
  </div></div>
