@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { ProductService } from '../Services/product.service';
 
 @Component({
@@ -9,49 +10,18 @@ import { ProductService } from '../Services/product.service';
 export class ProductComponent implements OnInit {
 
   public Products=[];
+  public Sales=[];
 
-  category_0:boolean=false;
-  category_1:boolean=false;
-  category_2:boolean=false; 
-  category_3:boolean=false;
+  page:number=1;
+  pageSize:number=8;
 
-  constructor(private GetAllProducts:ProductService) { }
+  constructor(private GetAllProducts:ProductService,private GetAllBestSeller:ProductService) { }
 
   ngOnInit(): void {
 
     this.GetAllProducts.getAllProducts().subscribe(data=>this.Products=data);
+    this.GetAllBestSeller.getAllBestSeller().subscribe(bestSeller=>this.Sales=bestSeller);
   }
-
-  check(event,name){
-
-    if(name=="all"){
-      this.category_0=true;
-      this.category_1=false;
-      this.category_2=false; 
-      this.category_3=false;
-    }
-    
-    else if(name=="herbalists"){
-      this.category_0=false;
-      this.category_1=true;
-      this.category_2=false; 
-      this.category_3=false;
-    }
-
-    else if(name=="aromatic"){
-      this.category_0=false;
-      this.category_1=false;
-      this.category_2=true; 
-      this.category_3=false;
-    }
-
-    else if(name=="decoration"){
-      this.category_0=false;
-      this.category_1=false;
-      this.category_2=false; 
-      this.category_3=true;
-    }
-
-  }
+   
 
 }
