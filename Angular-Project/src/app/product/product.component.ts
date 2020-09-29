@@ -21,6 +21,7 @@ export class ProductComponent implements OnInit {
 
     this.GetAllProducts.getAllProducts().subscribe(data=>this.Products=data);
     this.GetAllBestSeller.getAllBestSeller().subscribe(bestSeller=>this.Sales=bestSeller);
+  
   }
    
 

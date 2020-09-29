@@ -62,22 +62,16 @@
     </div>
 
 </div>
-
-
-
-
 <div class="our-product">
   <div class="overlay">
     <div class="container">
       <h2>OUR PRODUCTS</h2>
 
-
-      
       <ngb-carousel >
         <ng-template ngbSlide>
 
           <div class="row">
-          <div  *ngFor="let s of Sales ">
+          <div  *ngFor="let s of Sales">
             <div class="col-sm-3">
               <div class="card" style="width:250px; margin-bottom: 50px;">
                   <div class="portrait">
@@ -86,7 +80,9 @@
                     <span class=" del"><del>{{s.price}}</del></span>
                     <span class=" sale">{{s.sale}}</span>
                   </div>    
-                
+                  <div class="bottom-right">
+                    <a class="btn btn-success" href="#" role="button"><i class='fas fa-shopping-cart' style='font-size:24px'></i></a>
+                  </div>
                 </div>  
                   <div class="card-body">
                       <div *ngFor="let r of s.rateList" style="display: inline;">  
@@ -99,24 +95,10 @@
              </div>
           </div>
         </div>
-          <!-- <div class="col-xl-3 " >
-            <div class="product-box">
-              <div class="product-img">
-                <img src="{{s.img_url}}" class="d-block w-100" alt="...">
-                <span class="del"><del>{{s.price}}</del></span>
-                <span class="sale">{{s.sale}}</span>
-              </div>
-              <div class="product-details">
-                <h3>{{s.title}}</h3>
-                <p>{{s.txt}}</p>
-              </div>
-            </div>
-          </div> -->
-
+          
         </ng-template>
       </ngb-carousel>
-    
-        
+      
     </div>
   </div>
 </div>
