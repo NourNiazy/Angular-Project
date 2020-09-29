@@ -68,10 +68,10 @@
       <h2>OUR PRODUCTS</h2>
 
       <ngb-carousel >
-        <ng-template ngbSlide>
+        <ng-template ngbSlide *ngFor="let group of Sales">
 
           <div class="row">
-          <div  *ngFor="let s of Sales">
+          <div  *ngFor="let s of group.obj">
             <div class="col-sm-3">
               <div class="card" style="width:250px; margin-bottom: 50px;">
                   <div class="portrait">

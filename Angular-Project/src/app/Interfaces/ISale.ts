@@ -8,5 +8,5 @@ export interface ISale
     rate:number,
     rateList:[],
     title:string,
-    txt:string,
+    txt:string
 }
