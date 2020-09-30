@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,Input } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { ProductService } from '../Services/product.service';
 
@@ -8,7 +8,7 @@ import { ProductService } from '../Services/product.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
+  @Input() public className="our-product";
   public Products=[];
   public Sales=[];
 
