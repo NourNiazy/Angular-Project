@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,6 +19,13 @@ export class AppComponent {
 toggleNavbar() {
   this.navbarOpen = !this.navbarOpen;
 }*/
+@Input() product: any;
+@Output() productRemoved = new EventEmitter();
+modelChanged(product) {
+   if (this.product.num === 0) {
+    this.productRemoved.emit(this.product)
+   }
+}
 
 }
 
