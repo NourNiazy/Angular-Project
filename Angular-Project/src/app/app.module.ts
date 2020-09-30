@@ -13,6 +13,7 @@ import {ConfirmEqualValidatorDirective} from '../app/sharedfile/validatepassword
 import{HttpClientModule} from '@angular/common/http';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TeamComponent } from './team/team.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PageNotFoundComponent,
     ConfirmEqualValidatorDirective,
     CheckOutComponent,
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
