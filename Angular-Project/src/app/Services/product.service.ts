@@ -10,7 +10,10 @@ export class ProductService {
 
   public _url:string='/assets/Products/product.json';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+
+    
+   }
 
   getAllProducts():Observable<IProduct[]>
   {
