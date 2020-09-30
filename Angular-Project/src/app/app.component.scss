@@ -2,6 +2,17 @@ $green-color-one:#7DAD3D;
 $green-color-two:#54be73;
 $green-color-three:#78bf4d ;
 $green-color-four:#9cc026;
+$green-color-five: #f2f2f2;
+ 
+.mainButtonAshrqat{
+    margin-right: 10px;
+        border:solid 0px;
+        border-radius: 10px;
+}
+
+
+
+
 nav{
     height: 80px;
     background-color: white;
@@ -40,9 +51,9 @@ nav{
                     font-size:18px;  
                     font-weight: 500;
  
-                    &:hover ,  &:checked{
+                    &:hover ,  &:checked,&:active{
                         color:$green-color-three ;
-                        font-size:20px;   
+                        //font-size:20px;   
                     }  
                 
                     i{
@@ -53,7 +64,7 @@ nav{
 
                         &:hover ,  &:active{
                             color:$green-color-three ;
-                            font-size:20px;   
+                            //font-size:20px;   
                         }  
                     
                     }

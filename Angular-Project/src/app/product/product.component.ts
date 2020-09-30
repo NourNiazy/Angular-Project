@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild,Input } from '@angular/core';
+import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { IProduct } from '../Interfaces/IProduct';
+import { ItemProductService } from '../Services/item-list.service';
 import { ProductService } from '../Services/product.service';
 
 @Component({
@@ -8,13 +11,22 @@ import { ProductService } from '../Services/product.service';
 })
 export class ProductComponent implements OnInit {
 
-  public Products=[];
+  public Products: IProduct[]; 
+  public Sales: IProduct[];
 
-  constructor(private GetAllProducts:ProductService) { }
+  page:number=1;
+  pageSize:number=8;
+
+  constructor(private GetAllProductsService:ItemProductService) {
+    this.Products = this.GetAllProductsService.findAll();
+    this.Sales = this.GetAllProductsService.findAllSaleProduct();
+
+   }
 
   ngOnInit(): void {
 
-    this.GetAllProducts.getAllProducts().subscribe(data=>this.Products=data);
+  
   }
+   
 
 }
