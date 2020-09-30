@@ -26,29 +26,37 @@
   margin-top:40px;
     background-color:white;
     text-align: center;
+    padding: 0px !important;
  
 }
 .cards
 {
-   border:7px solid white;
-    background-color: rgb(217, 237, 250);
-    height:470px;
+     border:7px solid white;
+    background-color: #f1f1f1;
+    height:auto;
    text-align: center;
+   border-radius: 20px;
      
-    
+   padding:20px;
+   @media only screen and (max-width: 992px) {
+    border: none;
+    margin-bottom: 10px;
+}
     i{ 
        padding:7px;
      color:gray;
+     font-size: 5px;
     }
 }  
  
 .imges
    {
-       height:250px;
+       height:200px;
        width:200px;
-       padding-top:20px;
+       
        border: 0;
        vertical-align: middle;
+       margin-bottom: 10px;
    }
  .rounded-circle
    {
