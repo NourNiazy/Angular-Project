@@ -8,7 +8,7 @@ import { ProductService } from '../Services/product.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  @Input() public className="our-product";
+  public className="our-product";
   public Products=[];
   public Sales=[];
 
