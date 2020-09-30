@@ -1,56 +1,97 @@
-@import '../app.component.scss';
+@import "../app.component.scss";
 * {
     margin-top: 10px;
 }
-.cart-header{
-    margin-top:80px;
-    display: flex;
-    justify-content: center;
+
+.row {
     align-items: center;
-    color: white;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 170px;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("http://webdesign-finder.com/html/canabia/img/parallax/subscribe.jpg");
-}
-.row {   
-      align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  margin-right: 0px;
-  margin-left: 0px;
+    justify-content: center;
+
+    &:first-child {
+        margin-top: 100px;
+
+        tr td {
+            vertical-align: middle;
+            height: 5px;
+            padding: 10px;
+            figure{
+                margin-left:5px ;
+                a{
+                    margin-left:8px ;
+
+                }
+            }
+            img {
+                margin: 5px;
+                border:solid 1px $green-color-one;
+                border-radius: 10px;
+
+            }
+
+            .heart {
+                i {
+                    color: white;
+                }
+                background-color: red;
+            }
+            .remove {
+                color: white;
+                background-color: $green-color-one;
+            }
+            var {
+                font-style: normal;
+            }
+
+            .counterQ,
+            .quantity {
+                width: 80%;
+                text-align: center;
+                height: 40%;
+            }
+
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+                height: 40px;
+                opacity: 0.5;
+            }
+        }
+    }
+    &:nth-child(2) col-8 {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .coupon , .bill {
+        background-color: $green-color-five;
+    }
+    .purchase {
+        background-color: $green-color-one;
+    }
+    .shopping {
+        background-color: $green-color-four;
     }
     .apply {
         margin-top: 0px;
+        width: 100px;
+        margin-left: -10px;
+        border-radius: 0px 10px 10px 0px;
         background-color: $green-color-one;
-
     }
-
-
-.row:first-child {
-    margin-top: 100px;
+    .btn {
+        @extend .mainButtonAshrqat;
+        &:nth-child(1) {
+            background-color: $green-color-one;
+        }
+        &:nth-child(2) {
+            background-color: $green-color-three;
+        }
+        &:nth-child(3) {
+            color: $green-color-one;
+            border: solid 2px;
+            &:hover {
+                background-color: $green-color-three;
+                color: $green-color-five;
+            }
+        }
+    }
 }
-.coupon{
-    align-items: flex-start;
-}
-/*
-.quantity-wrapper {
-    position: relative;
-}
-
-.quantity-wrapper:after {
-    content: "+";
-    position: absolute;
-    right: 15px;
-    height: 100%;
-    top: 10px;
-    pointer-events: none;
-}
-
-.quantity-wrapper:before {
-    content: "-";
-    position: absolute;
-    left: 15px;
-    height: 100%;
-    top: 10px;
-}*/

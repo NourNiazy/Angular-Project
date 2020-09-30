@@ -24,7 +24,7 @@
             </div>    
             <div class="bottom-right">
               <a class="btn btn-light" href="#" role="button"><i style='font-size:24px;color:green' class='fas'>	&#xf004;</i></a>
-              <a class="btn btn-success" href="#" role="button"><i class='fas fa-shopping-cart' style='font-size:24px'></i></a>
+              <a class="btn btn-success" [routerLink]="['/cart', { id:p.id }]" href="#" role="button"><i class='fas fa-shopping-cart' style='font-size:24px'></i></a>
             </div>
           </div>  
             <div class="card-body">
