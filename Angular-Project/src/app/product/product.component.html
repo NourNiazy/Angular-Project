@@ -73,14 +73,14 @@
           <div class="row">
           <div  *ngFor="let s of group.obj">
             <div class="col-sm-3">
-              <div class="card" style="width:250px; margin-bottom: 50px;">
+              <div class="card product-box" style="width:250px; margin-bottom: 50px;">
                   <div class="portrait">
                     <img class="card-img-top zoom" src="{{s.img_url}}" alt="Card image">
                   <div >
                     <span class=" del"><del>{{s.price}}</del></span>
                     <span class=" sale">{{s.sale}}</span>
                   </div>    
-                  <div class="bottom-right">
+                  <div class="bottom-right-special">
                     <a class="btn btn-success" href="#" role="button"><i class='fas fa-shopping-cart' style='font-size:24px'></i></a>
                   </div>
                 </div>  

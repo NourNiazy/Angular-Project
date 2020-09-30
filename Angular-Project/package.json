@@ -22,6 +22,10 @@
     "@angular/router": "~10.1.1",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "bootstrap": "^4.5.0",
+<<<<<<< HEAD
+=======
+    "body-parser": "^1.19.0",
+>>>>>>> 7b31974e95a335da0e33199ee02990c21ebb0ac6
     "node-sass": "^4.14.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
