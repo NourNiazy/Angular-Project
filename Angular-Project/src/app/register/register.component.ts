@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   StateHasErr=true;
   Countrys=["Aland Islands","Afghanistan","Albania","Gabon","Gambia","Georgia","Germany","Ghana","United Arab Emirates","United Kingdom(uk)","Zimbabwe"];
   CountryHasErr=true;
-  userModel =new Userclass("","","","user123@gmail.com","","","United Kingdom(uk)","123","United Kingdom(uk)","0123456789","+123-456","","");
+  userModel =new Userclass("aml","lotfy","","user123@gmail.com","assuit","assuit","United Kingdom(uk)","123","United Kingdom(uk)","0123456789","+123-456","","");
   
 
   ngOnInit(): void {

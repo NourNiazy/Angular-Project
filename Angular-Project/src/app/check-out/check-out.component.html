@@ -5,33 +5,48 @@
  <div class="container">
      <div class="row">
          <div class="col-xl-8">
-             <form #checkoutForm="ngForm">
+             <form #checkoutForm="ngForm" novalidate>
                   <div class="billing-address">
                     <h3>Billing Address</h3>
                     <div class="form-group">
                       <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                      <input type="text" id="fname"pattern="" name="firstname"class="form-control"required [class.is-invalid]="firstname.invalid && firstname.touched " #firstname="ngModel" placeholder="John M. Doe"[(ngModel)]="checkoutModel.firstname" >
+                      <input type="text" id="fname"  name="fullname"class="form-control"required [class.is-invalid]="fullname.invalid && fullname.touched " #fullname="ngModel" placeholder="John M. Doe"[(ngModel)]="checkoutModel.fullname" >
+                      <small class="text-danger"  [class.d-none]="fullname.valid ||fullname.untouched">fullname  is Required</small>
                     </div>
                     <div class="form-group">
                       <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                      <input type="text" id="email"[class.is-invalid]="email.invalid && email.touched " name="email"#email="ngModel" placeholder="john@example.com"class="form-control"[(ngModel)]="checkoutModel.email"required>
+                      <input type="text" id="email"[class.is-invalid]="email.invalid && email.touched " pattern="^\w*@\w*\.com$" name="email"#email="ngModel" placeholder="john@example.com"class="form-control"[(ngModel)]="checkoutModel.email"required>
+                      <div *ngIf="email.errors && (email.invalid ||email.touched)">
+                        <small class="text-danger"
+                        *ngIf="email.errors.required">email is required</small>
+                        <small class="text-danger"
+                        *ngIf="email.errors.pattern">email must be in right format</small>
+                     </div>
                     </div>
                     <div class="form-group">
                       <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
                       <input type="text" id="adr" name="address"[class.is-invalid]="address.invalid && address.touched "#address="ngModel"  placeholder="542 W. 15th Street"class="form-control"[(ngModel)]="checkoutModel.address"required>
+                       <small class="text-danger"  [class.d-none]="address.valid ||address.untouched">address is Required</small>
                     </div>
                     <div class="form-group">
                       <label for="city"><i class="fa fa-institution"></i> City</label>
                       <input type="text" id="city" name="city"[class.is-invalid]="city.invalid && city.touched "#city="ngModel"  placeholder="New York"class="form-control"[(ngModel)]="checkoutModel.city"required>
+                      <small class="text-danger"  [class.d-none]="city.valid ||city.untouched">Town/City  is Required</small>
                     </div>
                     <div class="group">
                       <div class="form-group">
                         <label for="state">State</label>
-                        <input type="text" id="state" name="state"[class.is-invalid]="state.invalid && state.touched "#state="ngModel"  placeholder="NY"class="form-control"[(ngModel)]="checkoutModel.state"required>
+                        <input type="text" id="state" name="state"[class.is-invalid]="state.invalid && state.touched "#state="ngModel"  placeholder="NY"class="form-control"[(ngModel)]="checkoutModel.state" >
                       </div>
                       <div class="form-group">
                         <label for="zip">Zip</label>
-                        <input type="text" id="zip" name="zip"[class.is-invalid]="zip.invalid && zip.touched "#zip="ngModel"  placeholder="10001"class="form-control"[(ngModel)]="checkoutModel.zip"required>
+                        <input type="text" id="zip" pattern="^\d*$" name="zip"[class.is-invalid]="zip.invalid && zip.touched "#zip="ngModel"  placeholder="10001"class="form-control"[(ngModel)]="checkoutModel.zip"required>
+                        <div *ngIf="zip.errors && (zip.invalid ||zip.touched)">
+                          <small class="text-danger"
+                          *ngIf="zip.errors.required">zip number is required</small>
+                          <small class="text-danger"
+                          *ngIf="zip.errors.pattern">zip must be in only digits</small>
+                       </div>
                       </div>
                     </div>
                   </div>
@@ -46,11 +61,23 @@
                     </div>
                     <div class="form-group">
                       <label for="cname">Name on Card</label>
-                      <input type="text" class="form-control" id="cname"placeholder="Nour Mostafa"name="cname"[class.is-invalid]="cname.invalid && cname.touched "#cname="ngModel" [(ngModel)]="checkoutModel.cname"required>
+                      <input type="text" class="form-control" pattern="^\w*$" id="cname" name="cname"[class.is-invalid]="cname.invalid && cname.touched "#cname="ngModel" [(ngModel)]="checkoutModel.cname"required>
+                      <div *ngIf="cname.errors && (cname.invalid ||cname.touched)">
+                        <small class="text-danger"
+                        *ngIf="cname.errors.required">card on name number is required</small>
+                        <small class="text-danger"
+                        *ngIf="cname.errors.pattern">card on name must be in only charcters</small>
+                     </div>
                     </div>
                     <div class="form-group">
                       <label for="ccnum">Credit card number</label>
-                      <input type="text" id="ccnum" class="form-control"pattern="[0-9]{13,16}" name="cardnumber"[class.is-invalid]="cardnumber.invalid && cardnumber.touched "#cardnumber="ngModel"  placeholder="1111-2222-3333-4444"[(ngModel)]="checkoutModel.cardnumber"required>
+                      <input type="text" id="ccnum" class="form-control"pattern="^[\d|\-]{13,16}$" name="cardnumber"[class.is-invalid]="cardnumber.invalid && cardnumber.touched "#cardnumber="ngModel"  [(ngModel)]="checkoutModel.cardnumber"required>
+                      <div *ngIf="cardnumber.errors && (cardnumber.invalid ||cardnumber.touched)">
+                        <small class="text-danger"
+                        *ngIf="cardnumber.errors.required">card number is required</small>
+                        <small class="text-danger"
+                        *ngIf="cardnumber.errors.pattern">card number must be in right format</small>
+                     </div>
                     </div>
                     <div class="form-group">
                       <label for="expmonth">Exp Month</label>
@@ -63,12 +90,18 @@
                       </div>
                       <div class="form-group">
                         <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" name="cvv"[class.is-invalid]="cvv.invalid && cvv.touched "#cvv="ngModel" placeholder="352"class="form-control"[(ngModel)]="checkoutModel.cvv"required>
+                        <input type="text" id="cvv" pattern="^\d{3,4}$" name="cvv"[class.is-invalid]="cvv.invalid && cvv.touched "#cvv="ngModel" placeholder="352"class="form-control"[(ngModel)]="checkoutModel.cvv"required>
+                        <div *ngIf="cvv.errors && (cvv.invalid ||cvv.touched)">
+                          <small class="text-danger"
+                          *ngIf="cvv.errors.required">cvv number is required</small>
+                          <small class="text-danger"
+                          *ngIf="cvv.errors.pattern">cvv number must be in right format</small>
+                       </div>
                       </div>
                     </div>
                   </div>
                   <p>Returning customer?<a href=""routerLink="/register">Click here to register</a></p>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" [disabled]="checkoutForm.form.invalid" class="btn btn-primary">Submit</button>
               </form>
          </div>
          <div class="col-xl-4">

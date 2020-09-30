@@ -1,15 +1,15 @@
 export class Checkout {
     constructor(
-        public firstname:string,
+        public fullname:string,
         public email:string,
         public address:string,
         public city:string,
         public state:string,
-        public zip:string,
+        public zip:number,
         public cname:string,
-        public cardnumber:number,
-        public expmonth:string,
+        public cardnumber:string,
+        public expmonth:number,
         public expyear:number,
-        public cvv:string,
+        public cvv:number,
     ){}
 }
