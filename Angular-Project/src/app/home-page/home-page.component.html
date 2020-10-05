@@ -13,7 +13,7 @@
         <div class="carousel-caption  d-md-block">
           <p>OUR FACTORY IN COLORADO IS PRODUCING</p>
           <h5>Recreational & Medical Marijuana...</h5>
-          <button type="button" class="btn">BUY NOW</button>
+          <button type="button"  class="btn"><a href=""routerLink="/product" >BUY NOW</a></button>
         </div>
       </div>
       <div class="carousel-item">
@@ -21,7 +21,7 @@
         <div class="carousel-caption  d-md-block">
           <p>OUR FACTORY IN COLORADO IS PRODUCING</p>
           <h5>Recreational & Medical Marijuana...</h5>
-          <button type="button" class="btn">BUY NOW</button>
+          <button type="button" class="btn"><a href=""routerLink="/product" >BUY NOW</a></button>
         </div>
       </div>
       <div class="carousel-item">
@@ -29,7 +29,7 @@
         <div class="carousel-caption  d-md-block">
           <p>OUR FACTORY IN COLORADO IS PRODUCING</p>
           <h5>Recreational & Medical Marijuana...</h5>
-          <button type="button" class="btn">BUY NOW</button>
+          <button type="button"  class="btn"><a href=""routerLink="/product" >BUY NOW</a></button>
         </div>
       </div>
     </div>
@@ -104,211 +104,49 @@
       </div>
     </div>
   </div>
-  <!--EDITTTTTTT-->
-  <app-product [class]="className">
-  </app-product>
-  <!-- <div class="our-product">
-    <div class="overlay">
-      <div class="container">
-        <h2>OUR PRODUCTS</h2>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-xl-3 ">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/01 (1).jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon"role="button" href=""(productAdded)="addProductToCart($event)"><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
+<!------------------------ Start -->
+<div class="our-product">
+  <div class="overlay">
+    <div class="container">
+      <h2>OUR PRODUCTS</h2>
+
+      <ngb-carousel >
+        <ng-template ngbSlide *ngFor="let group of Sales">
+
+          <div class="row">
+          <div  *ngFor="let s of group.obj">
+            <div class="col-xl-3">
+              <div class="card product-box" style="width:250px; margin-bottom: 50px;">
+                  <div class="portrait">
+                    <img class="card-img-top zoom" src="{{s.img_url}}" alt="Card image">
+                  <div >
+                    <span class=" del"><del>{{s.price}}</del></span>
+                    <span class=" sale">{{s.sale}}</span>
+                  </div>    
+                  <div class="bottom-right">
+                    <a class="btn btn-success" href="#" role="button"><i class='fas fa-shopping-cart' style='font-size:24px'></i></a>
+                  </div>
+                </div>  
+                  <div class="card-body">
+                      <div *ngFor="let r of s.rateList" style="display: inline;">  
+                          <span class="fa fa-star {{r}}"></span>   
+                      </div><br><br>
+                        <h5 class="card-title">{{s.title}}</h5>
+                        <p class="card-text text-secondary">{{s.txt}}</p>
                   </div>
                 </div>
-                <div class="col-xl-3">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/04.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/02.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/01 (1).jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-xl-3 ">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/01 (1).jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/02.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/03.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/04.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-xl-3 ">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/02.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 ">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/04.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 ">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/01 (1).jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 ">
-                  <div class="product-box">
-                    <div class="product-img">
-                      <img src="../../../assets/img/03.jpg" class="d-block w-100" alt="...">
-                      <span class="del"><del>$50.00</del></span>
-                      <span class="sale">$40.00</span>
-                      <a class="cart-icon" href=""><i class="fas fa-shopping-cart fa-2x"></i></a>
-                    </div>
-                    <div class="product-details">
-                      <h3>Cannabis Flowers</h3>
-                      <p>Swine meatball shankle cow kielbasa burgdoggen shoulder andouille pork loin brisket leberkas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"> <i class="fas fa-chevron-left"></i></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"> <i class="fas fa-chevron-right"></i> </span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
-      </div>
-      <button class="btn"><a routerLink="/product" >
-        Product</a></button>
+          
+        </ng-template>
+      </ngb-carousel>
+      
     </div>
-  </div> -->
+    <button class="btn"><a routerLink="/product" >Product</a></button>
+  </div>
+</div>
+<!-- End -->
   <div class="subscribe">
     <div class="overlay">
       <div class="container">

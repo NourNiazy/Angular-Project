@@ -230,125 +230,7 @@ h1{
         }
     }
 }
-//OUR PRODUCT
-.our-product{
-    background-image: url("http://webdesign-finder.com/html/canabia/img/parallax/progress.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  h2{
-    color: $green-color-one;
-    margin-bottom: -50ox;
-  }
-  .overlay{
-      background-color: rgba(66, 60, 60, 0.718);
-      padding:100px 0px;
-      display: flex;
-      box-sizing: border-box;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      @media only screen and (max-width: 992px) {
-        padding:40px 0px;
-    }
-      .btn{
-        background-color: $green-color-one;
-        color: white;
-        border-radius: 10px;
-        margin-top: 80px;
-        padding: 8px 35px;
-        @media only screen and (max-width: 992px) {
-            margin-top: 30px;
-        }
-        a{
-            color: white;
-            text-decoration: none;
-        }
-      }
-      .carousel-control-prev-icon,.carousel-control-next-icon{
-          background-image: none;
-        background-color: $green-color-one;
-        box-sizing: border-box;
-        height: 50px;
-         width: 50px;
-        border-radius: 50%;
-        color:white;
-        padding: 13px;
-        i{
-            
-        }
-      }
-      .carousel-item{
-          .col-xl-3 {
-              .product-box{
-                  border-radius: 10px;
-                  overflow: hidden;
-                  @media only screen and (max-width: 992px) {
-                    margin-bottom: 20px;
-                }
-                  .product-img{
-                    overflow: hidden;
-                    img{
-                        position: relative;
-                        width: 270px;
-                        height: 270px;
-                    }
-                      .del,.sale,.cart-icon{
-                          position: absolute;
-                          top:10px;
-                          left:25px;
-                          color: white;
-                          background-color: $green-color-one;
-                          border-radius: 10px;
-                          padding: 5px;
-                          box-sizing: border-box;
-                      }
-                      .sale{
-                        top:50px;
-                        background-color: rgb(158, 15, 15);
-                      }
-                      .cart-icon{
-                        left:230px;
-                        top:230px;
-                        font-size: 10px;
-                      }
-                  }
-                  .product-details{
-                      background-color: white;
-                      overflow: hidden;
-                      padding: 30px;
-                      box-sizing: border-box;
-                      @media only screen and (max-width: 992px) {
-                        padding: 15px;
-                    }
-                      h3{
-                        font-size:20px;
-                        font-weight:700;
-                        height:auto;
-                        line-height:24px;
-                        overflow-wrap:break-word;
-                        text-decoration-color:rgb(31, 35, 43);
-                        margin-bottom: 16px;
-                      }
-                      p{
-                        color:rgb(128, 128, 128);
-                        font-size:16px;
-                        font-weight:400;
-                        height:90px;
-                        line-height:30px;
-                        width: 200px;
-                        @media only screen and (max-width: 992px) {
-                            width: 100%;
-                        }
-                      }
-                  }
-              }
 
-          }
-      }
-  }
-
-}
 //subscribe
 .subscribe{
     background-image:url(http://webdesign-finder.com/html/canabia/img/parallax/subscribe.jpg);
@@ -542,3 +424,107 @@ h1{
 }
 @media only screen and (max-width: 992px) {
   }
+//OUR PRODUCT
+.card{
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+    background-color:#dddddd;
+}
+.card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.3);
+  }
+.card-title:hover{
+  color: $green-color-three;
+}
+.checked {
+    color: green;
+  }
+  .bottom-right {
+    position: absolute;
+    top:25%;
+    right: 11px;
+    a{
+        padding: 8px !important;
+    }
+    @media only screen and (max-width: 992px) {
+        top: 45% !important;
+    }
+  }
+  .portrait{
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  .zoom {
+      border-radius: 10px 10px 0px 0px;
+      transition: transform 1s linear;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+  .zoom:hover {
+      transform: scale(1.2); 
+    }
+  .our-product{
+    background-image: url("http://webdesign-finder.com/html/canabia/img/parallax/progress.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  h2{
+    color: $green-color-one;
+    margin-bottom: 40px;
+  }
+  .overlay{
+      background-color: rgba(66, 60, 60, 0.718);
+      padding:100px 0px;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (max-width: 992px) {
+        padding:40px 0px;
+    }
+  }
+}
+
+.product-box{
+        // border-radius: 10px;
+        // overflow: hidden;
+        @media only screen and (max-width: 992px) {
+            margin-bottom: 20px;
+            width:100% !important;
+        }
+    }
+.btn{
+            background-color: $green-color-one;
+            color: white;
+            border-radius: 10px;
+            margin-top: 80px;
+            padding: 8px 35px;
+            @media only screen and (max-width: 992px) {
+                margin-top: 30px;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                //padding: 0px !important;
+            }
+
+    }
+.del,.sale{
+  position: absolute;
+  top:10px;
+  left:25px;
+  color: white;
+  background-color: $green-color-one;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.sale{
+top:50px;
+background-color: rgb(158, 15, 15);
+}
