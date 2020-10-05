@@ -13,7 +13,7 @@ import { ProductService } from '../Services/product.service';
 export class CartComponent implements OnInit {
    itemsProductList: Item[] = [];
 	 total: number = 0;
-
+	 quantityValue=1;
   constructor( private itemProductService:ItemProductService , private activatedRoute: ActivatedRoute,) { }
   
   ngOnInit(): void {
@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
 			if (id) {
 				var item: Item = {
 					product: this.itemProductService.find(id),
-					quantity: 1
+					quantity:1
 				};
 				/*document.getElementById('quantityValue')*/
 				if (localStorage.getItem('cart') == null) {

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from '../Interfaces/IProduct';
+import { ISale } from '../Interfaces/ISale';
 import { ProductService } from './product.service';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { ProductService } from './product.service';
 })
 export class ItemProductService {
   Products: IProduct[];
-  SaleProducts: IProduct[];
+  SaleProducts: ISale[];
 
   constructor(private GetAllProducts: ProductService) {
     this.GetAllProducts.getAllProducts().subscribe(data => this.Products = data);
@@ -18,10 +19,10 @@ export class ItemProductService {
     return this.Products;
   }
 
-  findAllSaleProduct(): IProduct[] {
+  findAllSaleProduct(): ISale[] {
     return this.SaleProducts;
   }
-  find(id: number): IProduct {
+  find(id: number): IProduct{
     return this.Products[this.getSelectedIndex(id)];
   }
   getSelectedIndex(id: number) {

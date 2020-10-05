@@ -10,6 +10,8 @@
                             <th scope="col-4">Product</th>
                             <th scope="col-2" width="120">Quantity</th>
                             <th scope="col-2" width="120">Price</th>
+                            <th scope="col-2" width="120">Sub Total</th>
+
                             <th scope="col-2" width="120"></th>
 
                         </tr>
@@ -27,25 +29,28 @@
                             </td>
 
                             <td>
+                                <input  [(ngModel)]="quantityValue" type="number"  max="10" min="1" name="size" step="1" type="number" >
 
-                                <input class="quantityValue " max="10" min="1" name="size" step="1" type="number" value="1">
                             </td>
                             <td>
-                                <div class="price-wrap">
-                                    <var class="price">{{item.product.price}}</var> <br>
+                                <div class="price-wrap" [(ngModel)]="item.product.price" >
+                                    {{item.product.price | currency}}<br>
 
                                 </div>
                             </td>
+                            <td >  {{  item.product.price * quantityValue  | currency }}</td>
 
 
                             <td >
-                                <a data-original-title="Save to Wishlist" title="" href="#" class="btn btn-light heart"
-                                    data-toggle="tooltip"> <i class="fa fa-heart inline"></i></a>
-                                <a href="#" class="btn btn-light remove inline" (click)="remove(item.product.id)"> <i
+                             <div>  <a  data-original-title="Save to Wishlist" title="" href="#" class="btn btn-light heart"
+                                    data-toggle="tooltip"> <i class="fa fa-heart "></i></a>
+                                    <a href="#" class="btn btn-light remove " (click)="remove(item.product.id)"> <i
                                         class="far fa-trash-alt"></i>
 
                                 </a>
+                            </div> 
                             </td>
+
                         </tr>
 
                     </tbody>
